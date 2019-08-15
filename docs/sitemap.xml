@@ -3,6 +3,10 @@
   xmlns:xhtml="hddp://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/</loc>
+  </url>
+  
+  <url>
     <loc>/20170901_vdxy01nyyam.info_dir/</loc>
   </url>
   
@@ -128,11 +132,6 @@
   
   <url>
     <loc>/20171031_fyb6rmzhjgy.info_dir/</loc>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
