@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20171004_3uUd8bIkhLA.info.json.vo.* \
+    20171004_3uUd8bIkhLA.info.json.ao.* \
+    20171004_3uUd8bIkhLA.info.json.bo.* \
+    20171004_3uUd8bIkhLA.info.json.wav 
+
+rm -fr               20171004_3uUd8bIkhLA.info_dir
+mkdir -p             20171004_3uUd8bIkhLA.info_dir
+mv 20171004_3uUd8bIkhLA.info.json 20171004_3uUd8bIkhLA.info.json.*         20171004_3uUd8bIkhLA.info_dir/
+
+
+
+mv  20171004_3uUd8bIkhLA.info_dir/20171004_3uUd8bIkhLA.info.json.jpg 20171004_3uUd8bIkhLA.info_dir/20171004_3uUd8bIkhLA.info.json.mp4.jpg
+
+cat > 20171004_3uUd8bIkhLA.info_dir/_index.md << EOF3
++++
+title = " 20171004_3uUd8bIkhLA 秦伟平中秋佳节送祝福 2017-10-04 "
+description = " 值此中秋佳节之际，秦伟平在美国祝所有关注平论的朋友们和海内外华人朋友们节日快乐，阖家幸福安康。🎆🍾️🎊🎉🎈 "
+weight = 20
++++
+
+{{< mymp4 mp4="20171004_3uUd8bIkhLA.info.json.mp4" 
+text="len $(cat 20171004_3uUd8bIkhLA.info_dir/20171004_3uUd8bIkhLA.info.json.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20171004_3uUd8bIkhLA.info.json.25k.mp4"
+text="len $(cat 20171004_3uUd8bIkhLA.info_dir/20171004_3uUd8bIkhLA.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="值此中秋佳节之际，秦伟平在美国祝所有关注平论的朋友们和海内外华人朋友们节日快乐，阖家幸福安康。🎆🍾️🎊🎉🎈" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=3uUd8bIkhLA" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+

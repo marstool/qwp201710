@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20171024_R6qf2xsNBS4.info.json.vo.* \
+    20171024_R6qf2xsNBS4.info.json.ao.* \
+    20171024_R6qf2xsNBS4.info.json.bo.* \
+    20171024_R6qf2xsNBS4.info.json.wav 
+
+rm -fr               20171024_R6qf2xsNBS4.info_dir
+mkdir -p             20171024_R6qf2xsNBS4.info_dir
+mv 20171024_R6qf2xsNBS4.info.json 20171024_R6qf2xsNBS4.info.json.*         20171024_R6qf2xsNBS4.info_dir/
+
+
+
+mv  20171024_R6qf2xsNBS4.info_dir/20171024_R6qf2xsNBS4.info.json.jpg 20171024_R6qf2xsNBS4.info_dir/20171024_R6qf2xsNBS4.info.json.webm.mp4.jpg
+
+cat > 20171024_R6qf2xsNBS4.info_dir/_index.md << EOF3
++++
+title = " 20171024_R6qf2xsNBS4 平论Live | 十九大闭幕，习近平将开启执政二十年新时代 2017-10-24 "
+description = " 举世瞩目的中共十九大闭幕，习近平新时代中国特色社会主义思想，写入党章，这是习近平登顶权力巅峰的重要一步，他已经超越江泽民和胡锦涛的同期党内影响力，甚至依旧超越邓小平，直追毛泽东。在中国的明斯基时刻带来之前，在随时可能爆发的中国债务危机和金融危机前，中共高层罕见的高度团结，将习近平推上神坛，按照最新常委名单，习近平已经完全掌控人事布局，他将开启执政中国二十年新时代。_当未来中国社会危机和政治危机爆发后，习近平是暴力镇压双手沾血，还是顺应潮流开放党禁？欢迎收看本期平论。 "
+weight = 20
++++
+
+{{< mymp4 mp4="20171024_R6qf2xsNBS4.info.json.webm.mp4" 
+text="len $(cat 20171024_R6qf2xsNBS4.info_dir/20171024_R6qf2xsNBS4.info.json.webm.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20171024_R6qf2xsNBS4.info.json.25k.mp4"
+text="len $(cat 20171024_R6qf2xsNBS4.info_dir/20171024_R6qf2xsNBS4.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="举世瞩目的中共十九大闭幕，习近平新时代中国特色社会主义思想，写入党章，这是习近平登顶权力巅峰的重要一步，他已经超越江泽民和胡锦涛的同期党内影响力，甚至依旧超越邓小平，直追毛泽东。在中国的明斯基时刻带来之前，在随时可能爆发的中国债务危机和金融危机前，中共高层罕见的高度团结，将习近平推上神坛，按照最新常委名单，习近平已经完全掌控人事布局，他将开启执政中国二十年新时代。_当未来中国社会危机和政治危机爆发后，习近平是暴力镇压双手沾血，还是顺应潮流开放党禁？欢迎收看本期平论。" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=R6qf2xsNBS4" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+

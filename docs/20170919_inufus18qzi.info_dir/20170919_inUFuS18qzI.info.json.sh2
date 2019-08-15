@@ -1,0 +1,54 @@
+#!/bin/bash
+
+rm -f \
+    20170919_inUFuS18qzI.info.json.vo.* \
+    20170919_inUFuS18qzI.info.json.ao.* \
+    20170919_inUFuS18qzI.info.json.bo.* \
+    20170919_inUFuS18qzI.info.json.wav 
+
+rm -fr               20170919_inUFuS18qzI.info_dir
+mkdir -p             20170919_inUFuS18qzI.info_dir
+mv 20170919_inUFuS18qzI.info.json 20170919_inUFuS18qzI.info.json.*         20170919_inUFuS18qzI.info_dir/
+
+
+
+mv  20170919_inUFuS18qzI.info_dir/20170919_inUFuS18qzI.info.json.jpg 20170919_inUFuS18qzI.info_dir/20170919_inUFuS18qzI.info.json.mp4.jpg
+
+cat > 20170919_inUFuS18qzI.info_dir/_index.md << EOF3
++++
+title = " 20170919_inUFuS18qzI 平论Live | 十九大后，中国面临的挑战与全球化的未来 2017-09-19 "
+description = " 十九大，可能是中国的一个转折点。十九大后，中国经济将会面临严重的硬着陆状况，社会危机政治危机随时爆发，中国面临经济和政治的双重挑战，可能会重走计划经济道路，大数据时代，是否会有奇迹发生？全球化遭遇寒流，未来会一帆风顺吗？ "
+weight = 20
++++
+
+{{< mymp4 mp4="20170919_inUFuS18qzI.info.json.mp4" 
+text="len $(cat 20170919_inUFuS18qzI.info_dir/20170919_inUFuS18qzI.info.json.mp4|wc -c)"
+>}}
+
+{{< mymp4x  mp4x="20170919_inUFuS18qzI.info.json.25k.mp4"
+text="len $(cat 20170919_inUFuS18qzI.info_dir/20170919_inUFuS18qzI.info.json.25k.mp4|wc -c)"
+>}}
+
+
+{{< mydiv text="十九大，可能是中国的一个转折点。十九大后，中国经济将会面临严重的硬着陆状况，社会危机政治危机随时爆发，中国面临经济和政治的双重挑战，可能会重走计划经济道路，大数据时代，是否会有奇迹发生？全球化遭遇寒流，未来会一帆风顺吗？" >}}
+<br>
+
+{{< mydiv text="https://www.youtube.com/watch?v=inUFuS18qzI" >}}
+
+
+<br>
+
+请大家传播时，不需要传播文件本身，<br>
+原因是：一旦传播过大东西（例如，图片，文件），<br>
+就会触发检查机制。<br>
+我不知道检查机制的触发条件。<br>
+但是我知道，不会说你传一个没有敏感词的网络地址都检查，<br>
+否则，检查员得累死。<br><br>
+直接转发网址就可以了：<br>
+原因是，这是程序员网站，<br>
+共匪不敢封锁，墙内可以直接下载。
+
+
+EOF3
+
+
